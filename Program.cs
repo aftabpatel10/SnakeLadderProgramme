@@ -32,15 +32,26 @@ namespace SnakeLadder
                     {
                         case 1:
                             Console.WriteLine("Ladder");
-                            position += position;
+                            position += diceoutput;
+                            if(position >=100)
+                            {
+                                position = position - diceoutput;
+                            }
+                            Console.WriteLine("Position :" +position);
                             break;
                         case 2:
                             Console.WriteLine("Snake");
-                            position -= position;
+                            position -= diceoutput;
+                            if (position > 0)
+                            {
+                                position = position + diceoutput;
+                            }
+                            Console.WriteLine("Position :" +position);
                             break;
                         default:
                             Console.WriteLine("No Play");
                             position = position;
+                            Console.WriteLine("Position :" +position);
                             break;
                     }
                     Console.WriteLine($"rollingdice : {dicecount}");
