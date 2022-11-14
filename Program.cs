@@ -13,6 +13,7 @@ namespace SnakeLadder
             Console.WriteLine("Welcome To Snake Ladder Programme");
             int position = 0;
             Console.WriteLine($"Game at initial position : {position}");
+            int count = 0;
 
            
             {
@@ -21,6 +22,7 @@ namespace SnakeLadder
                 {
                     Random random = new Random();
                     int diceoutput = random.Next(1, 7);
+                    count++;
                     Console.WriteLine("Dice Output is ;" + diceoutput);
                     position = position + diceoutput;
                     Console.WriteLine("Position :" + position);
@@ -57,7 +59,8 @@ namespace SnakeLadder
                     Console.WriteLine($"rollingdice : {dicecount}");
                     Console.ReadLine();
                 }
-
+                Console.WriteLine("No Of Times Dice Thrown is :" +position);
+                Console.ReadLine();
                 
             }
 
